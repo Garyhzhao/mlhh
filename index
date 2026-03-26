@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Internship Program</title>
+  <style>
+    :root{
+      --accent:#0b6efd;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --radius:8px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{margin:0;background:var(--bg);color:#111827;line-height:1.5}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    h1{margin:0;font-size:1.6rem;}
+    nav a{margin-left:12px;color:var(--accent);text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 1px 3px rgba(15,23,42,0.06)}
+    section h2{margin-top:0;margin-bottom:8px}
+    p.lead{color:var(--muted);margin-top:0}
+    /* Staff list */
+    .staff-list{display:flex;flex-direction:column;gap:12px}
+    .staff{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#e6eefc,#eef6ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .staff-info small{color:var(--muted)}
+    /* Form styles */
+    label{display:block;font-weight:600;margin:10px 0 6px}
+    input[type="text"],input[type="email"],select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee;background:#fff}
+    textarea{min-height:120px;resize:vertical}
+    .row{display:flex;gap:12px}
+    .row .col{flex:1}
+    button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px solid #eef2f6;text-align:left}
+    th{background:#fbfdff;font-weight:700}
+    .muted{color:var(--muted);font-size:0.95rem}
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Internship Program</h1>
+        <div class="muted">Structured training & mentorship for emerging talent</div>
+      </div>
+      <nav>
+        <a href="#program">Program</a>
+        <a href="#staff">Staff</a>
+        <a href="#apply">Apply</a>
+        <a href="#students">Students</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <!-- Program Design -->
+        <section id="program" class="card">
+          <h2>Program Design</h2>
+          <p class="lead">A concise overview of goals, duration, structure, and evaluation.</p>
+
+          <h3>Goals</h3>
+          <ul>
+            <li>Provide hands-on experience in real projects.</li>
+            <li>Deliver mentorship, workshops, and career guidance.</li>
+            <li>Assess and onboard top-performing interns to full-time roles.</li>
+          </ul>
+
+          <h3>Structure & Timeline</h3>
+          <table>
+            <thead>
+              <tr><th>Phase</th><th>Duration</th><th>Activities</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Orientation</td><td>1 week</td><td>Onboarding, intro workshops</td></tr>
+              <tr><td>Core Work</td><td>10 weeks</td><td>Project assignments, mentoring</td></tr>
+              <tr><td>Evaluation</td><td>1 week</td><td>Presentations, feedback</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Evaluation & Outcomes</h3>
+          <ul>
+            <li>Weekly mentor check-ins and mid-program review.</li>
+            <li>Final presentation and performance scoring.</li>
+            <li>Certificate of completion and referral letters for top performers.</li>
+          </ul>
+        </section>
+
+        <!-- Application Form -->
+        <section id="apply" class="card" style="margin-top:18px">
+          <h2>Application</h2>
+          <p class="muted">Use this form to accept applications. Adapt action/method/server integration as needed.</p>
+
+          <!-- Example client-side form (no back-end included) -->
+          <form id="applicationForm">
+            <div class="row">
+              <div class="col">
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" required />
+              </div>
+              <div class="col">
+                <label for="lastName">Last name</label>
+                <input id="lastName" name="lastName" type="text" required />
+              </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="text" />
+
+            <label for="degree">Current degree / status</label>
+            <input id="degree" name="degree" type="text" placeholder="e.g., BSc Computer Science, Junior" />
+
+            <label for="skills">Key skills</label>
+            <input id="skills" name="skills" type="text" placeholder="Comma-separated" />
+
+            <label for="motivation">Why do you want to join?</label>
+            <textarea id="motivation" name="motivation" required></textarea>
+
+            <label for="portfolio">Portfolio / LinkedIn (optional)</label>
+            <input id="portfolio" name="portfolio" type="text" placeholder="https://..." />
+
+            <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+              <button type="submit">Submit application</button>
+              <div class="muted" style="font-size:0.9rem">Note: This example does not submit to a server.</div>
+            </div>
+          </form>
+
+          <script>
+            // Example front-end handling: collects form data and logs to console.
+            // Replace with fetch(...) to submit to your server endpoint.
+            document.getElementById('applicationForm').addEventListener('submit', function(e){
+              e.preventDefault();
+              const data = Object.fromEntries(new FormData(e.target));
+              console.log('Application submitted (client-only):', data);
+              alert('Application recorded locally. Integrate with a backend to save submissions.');
+              e.target.reset();
+            });
+          </script>
+        </section>
+
+        <!-- Enrolled Students -->
+        <section id="students" class="card" style="margin-top:18px">
+          <h2>Enrolled Students</h2>
+          <p class="muted">List of students currently enrolled. Update server-side data to keep this list live.</p>
+
+          <!-- Example table with sortable client-side filter -->
+          <input id="studentFilter" type="text" placeholder="Filter by name or skill" style="padding:8px;border-radius:8px;border:1px solid #e6e9ee;width:100%;margin-bottom:10px" />
+
+          <table id="studentsTable" aria-describedby="student-list">
+            <thead>
+              <tr><th>Name</th><th>Institution</th><th>Role/Focus</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <!-- Example rows (replace with dynamic server data) -->
+              <tr><td>Alice Chen</td><td>State University</td><td>Frontend Dev</td><td>Active</td></tr>
+              <tr><td>Mateo Ruiz</td><td>Tech Institute</td><td>Data Science</td><td>Active</td></tr>
+              <tr><td>Sofia Patel</td><td>City College</td><td>Product Design</td><td>Active</td></tr>
+            </tbody>
+          </table>
+
+          <script>
+            const filterInput = document.getElementById('studentFilter');
+            const table = document.getElementById('studentsTable').getElementsByTagName('tbody')[0];
+            filterInput.addEventListener('input', function(){
+              const q = this.value.toLowerCase();
+              Array.from(table.rows).forEach(row=>{
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(q) ? '' : 'none';
+              });
+            });
+          </script>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="card" style="margin-top:18px">
+          <h2>Contact</h2>
+          <p class="muted">Primary contact for questions about the program.</p>
+
+          <div style="display:flex;gap:14px;align-items:center">
+            <div class="avatar" aria-hidden="true">PM</div>
+            <div>
+              <div style="font-weight:700">Program Coordinator</div>
+              <div class="muted">internships@example.org</div>
+              <div class="muted">+1 (555) 123-4567</div>
+            </div>
+          </div>
+
+          <h3 style="margin-top:12px">Contact form</h3>
+          <form id="contactForm">
+            <label for="cName">Your name</label>
+            <input id="cName" name="cName" type="text" required />
+
+            <label for="cEmail">Your email</label>
+            <input id="cEmail" name="cEmail" type="email" required />
+
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" name="cMessage" required></textarea>
+
+            <div style="margin-top:10px">
+              <button type="submit">Send message</button>
+            </div>
+          </form>
+
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e){
+              e.preventDefault();
+              const data = Object.fromEntries(new FormData(e.target));
+              console.log('Contact message (client-only):', data);
+              alert('Message recorded locally. Wire up a backend to receive messages.');
+              e.target.reset();
+            });
+          </script>
+        </section>
+      </main>
+
+      <!-- Right column: Staff & Quick Info -->
+      <aside>
+        <section id="staff" class="card">
+          <h2>Operation Staff</h2>
+          <p class="muted">Key team members who run the internship.</p>
+
+          <div class="staff-list">
+            <div class="staff">
+              <div class="avatar">JS</div>
+              <div class="staff-info">
+                <div style="font-weight:700">Jordan Smith</div>
+                <small>Program Director — jordan.smith@example.org</small>
+              </div>
+            </div>
+
+            <div class="staff">
+              <div class="avatar">AR</div>
+              <div class="staff-info">
+                <div style="font-weight:700">Aisha Rahman</div>
+                <small>Head Mentor — aisha.mentor@example.org</small>
+              </div>
+            </div>
+
+            <div class="staff">
+              <div class="avatar">MK</div>
+              <div class="staff-info">
+                <div style="font-weight:700">Miguel Kane</div>
+                <small>Operations Lead — miguel.ops@example.org</small>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top:12px">Quick resources</h3>
+          <ul>
+            <li><a href="#apply">Application form</a></li>
+            <li><a href="#students">Enrolled students</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:16px">
+          <h3>Program stats</h3>
+          <table>
+            <tbody>
+              <tr><th>Capacity</th><td>30 interns</td></tr>
+              <tr><th>Current enrolled</th><td>3 (example)</td></tr>
+              <tr><th>Duration</th><td>12 weeks</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Internship Program • Built with a simple HTML template
+    </footer>
+  </div>
+
+  <script>
+    // small dynamic helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
