@@ -95,7 +95,7 @@
         <!-- Application Form -->
         <section id="apply" class="card" style="margin-top:18px">
           <h2>Application</h2>
-          <p class="muted">Use this form to submit an application.</p>
+          <p class="muted">Note: if you are a recent graduate, you are advised to jointly apply to the FHCC post-bacc program (https://www.fredhutch.org/en/education-training/fred-hutch-postbaccalaureate-scholar-program.html) to increase your chance of admission.</p>
 
           <!-- Example client-side form (no back-end included) -->
           <form id="applicationForm">
@@ -113,24 +113,19 @@
             <label for="email">Email</label>
             <input id="email" name="email" type="email" required />
 
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="text" />
 
-            <label for="degree">Current degree / status</label>
+            <label for="degree">College and major</label>
             <input id="degree" name="degree" type="text" placeholder="e.g., BSc Computer Science, Junior" />
 
-            <label for="skills">Key skills</label>
+            <label for="skills">Experience related to ML</label>
             <input id="skills" name="skills" type="text" placeholder="Comma-separated" />
 
-            <label for="motivation">Why do you want to join?</label>
-            <textarea id="motivation" name="motivation" required></textarea>
-
-            <label for="portfolio">Portfolio / LinkedIn (optional)</label>
+            <label for="portfolio">CV / LinkedIn (optional)</label>
             <input id="portfolio" name="portfolio" type="text" placeholder="https://..." />
 
             <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
               <button type="submit">Submit application</button>
-              <div class="muted" style="font-size:0.9rem">Note: This example does not submit to a server.</div>
+              <div class="muted" style="font-size:0.9rem">Note: This form is not activated yet.</div>
             </div>
           </form>
 
@@ -161,9 +156,9 @@
             </thead>
             <tbody>
               <!-- Example rows (replace with dynamic server data) -->
-              <tr><td>Alice Chen</td><td>State University</td><td>Frontend Dev</td><td>Active</td></tr>
-              <tr><td>Mateo Ruiz</td><td>Tech Institute</td><td>Data Science</td><td>Active</td></tr>
-              <tr><td>Sofia Patel</td><td>City College</td><td>Product Design</td><td>Active</td></tr>
+              <tr><td>A B</td><td>University</td><td>Dev</td><td>Active</td></tr>
+              <tr><td>C D</td><td>Tech Institute</td><td>Data Science</td><td>Active</td></tr>
+            
             </tbody>
           </table>
 
@@ -186,73 +181,42 @@
           <p class="muted">Primary contact for questions about the program.</p>
 
           <div style="display:flex;gap:14px;align-items:center">
-            <div class="avatar" aria-hidden="true">PM</div>
+            <div class="avatar" aria-hidden="true">GZ</div>
             <div>
-              <div style="font-weight:700">Program Coordinator</div>
-              <div class="muted">internships@example.org</div>
-              <div class="muted">+1 (555) 123-4567</div>
+              <div style="font-weight:700">Program Director: Gary Zhao,PhD</div>
+              <div class="muted">hzhao2 |at| fredhutch.org</div>
+              
             </div>
           </div>
 
-          <h3 style="margin-top:12px">Contact form</h3>
-          <form id="contactForm">
-            <label for="cName">Your name</label>
-            <input id="cName" name="cName" type="text" required />
 
-            <label for="cEmail">Your email</label>
-            <input id="cEmail" name="cEmail" type="email" required />
-
-            <label for="cMessage">Message</label>
-            <textarea id="cMessage" name="cMessage" required></textarea>
-
-            <div style="margin-top:10px">
-              <button type="submit">Send message</button>
-            </div>
-          </form>
-
-          <script>
-            document.getElementById('contactForm').addEventListener('submit', function(e){
-              e.preventDefault();
-              const data = Object.fromEntries(new FormData(e.target));
-              console.log('Contact message (client-only):', data);
-              alert('Message recorded locally. Wire up a backend to receive messages.');
-              e.target.reset();
-            });
-          </script>
         </section>
       </main>
 
       <!-- Right column: Staff & Quick Info -->
       <aside>
         <section id="staff" class="card">
-          <h2>Operation Staff</h2>
-          <p class="muted">Key team members who run the internship.</p>
+          <h2>Operation Team</h2>
+          <p class="muted">Current key team members.</p>
 
           <div class="staff-list">
             <div class="staff">
-              <div class="avatar">JS</div>
+              <div class="avatar">GZ</div>
               <div class="staff-info">
-                <div style="font-weight:700">Jordan Smith</div>
-                <small>Program Director — jordan.smith@example.org</small>
+                <div style="font-weight:700">Gary Zhao, PhD</div>
+                <small>Program Director</small>
               </div>
             </div>
 
             <div class="staff">
-              <div class="avatar">AR</div>
+              <div class="avatar">AB</div>
               <div class="staff-info">
-                <div style="font-weight:700">Aisha Rahman</div>
-                <small>Head Mentor — aisha.mentor@example.org</small>
+                <div style="font-weight:700">A B</div>
+                <small>College Representative</small>
               </div>
             </div>
 
-            <div class="staff">
-              <div class="avatar">MK</div>
-              <div class="staff-info">
-                <div style="font-weight:700">Miguel Kane</div>
-                <small>Operations Lead — miguel.ops@example.org</small>
-              </div>
-            </div>
-          </div>
+            
 
           <h3 style="margin-top:12px">Quick resources</h3>
           <ul>
@@ -266,9 +230,9 @@
           <h3>Program stats</h3>
           <table>
             <tbody>
-              <tr><th>Capacity</th><td>30 interns</td></tr>
-              <tr><th>Current enrolled</th><td>3 (example)</td></tr>
-              <tr><th>Duration</th><td>12 weeks</td></tr>
+              <tr><th>Capacity</th><td>15 trainees</td></tr>
+              <tr><th>Current enrolled</th><td>3</td></tr>
+              <tr><th>Investigators involved</th><td>4</td></tr>
             </tbody>
           </table>
         </section>
