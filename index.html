@@ -33,7 +33,7 @@
     textarea{min-height:120px;resize:vertical}
     .row{display:flex;gap:12px}
     .row .col{flex:1}
-    button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+    button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
     table{width:100%;border-collapse:collapse;margin-top:12px}
     th,td{padding:10px;border-bottom:1px solid #eef2f6;text-align:left}
     th{background:#fbfdff;font-weight:700}
@@ -102,22 +102,17 @@
           <form id="applicationForm">
               <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
               <button type="submit">Please submit the below info to MLHH Director via email</button>
-              <div class="muted" style="font-size:0.9rem">Note: recommendations from college representatives are also welcome.</div>
             </div>
-            
+            <div class="muted" style="font-size:0.9rem">Note: recommendations from college representatives are also welcome.</div>
             <div class="row">
               <div class="col">
-                <label for="firstName">First name</label>
-                
-              </div>
-              <div class="col">
-                <label for="lastName">Last name</label>
+                <label for="firstName">First & Last name, Preferred Pronouns if any</label>
                 
               </div>
             </div>
 
             <label for="degree">College and major</label>
-            <input id="degree" name="degree" type="text" placeholder="e.g., BSc Computer Science, Junior" />
+            <label for="eg">    e.g. UW (main campus), BSc Computer Science, Junior Year</label>
 
             <label for="skills">Experience related to ML</label>
 
@@ -125,17 +120,7 @@
 
           </form>
 
-          <script>
-            // Example front-end handling: collects form data and logs to console.
-            // Replace with fetch(...) to submit to your server endpoint.
-            document.getElementById('applicationForm').addEventListener('submit', function(e){
-              e.preventDefault();
-              const data = Object.fromEntries(new FormData(e.target));
-              console.log('Application submitted (client-only):', data);
-              alert('Application recorded locally. Integrate with a backend to save submissions.');
-              e.target.reset();
-            });
-          </script>
+  
         </section>
 
         <!-- Enrolled Students -->
